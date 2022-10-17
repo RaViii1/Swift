@@ -29,11 +29,23 @@ let nl : Int = Int(name.count)
 let n12 : Int = name2.count 
 let srl : Int = lastName.count 
 let yl : Int = year.count 
-
+var str2 = str1
 var x = n12 + 2
 for _ in 1...x {
-    var i = str1.index(str1.startIndex, offsetBy: nl+1)
-    var removed_String = str1.remove(at: i)
+    var i = str2.index(str2.startIndex, offsetBy: nl+1)
+    var removed_String = str2.remove(at: i)
     }
-print(str1)
-//Polecenie 3
+print("Po usunięciu drugiego imienia: ")
+print(str2)
+//Polecenie3
+var str3 = str1
+var age = 2022 - Int(year)!
+for _ in 1...4{
+    
+    str3.removeLast()
+    
+}
+str3.append(String(age))
+print("Po usunięciu roku urodzenia: ")
+print(str3)
+//Polecenie4
