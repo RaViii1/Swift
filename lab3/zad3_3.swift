@@ -49,3 +49,9 @@ str3.append(String(age))
 print("Po usunięciu roku urodzenia: ")
 print(str3)
 //Polecenie4
+if str1.prefix(1) == "D"
+{
+    print("Imie zaczyna sie na D")
+}else {
+    print("Imie zaczyna sie na: \(str1.prefix(1))")
+}
