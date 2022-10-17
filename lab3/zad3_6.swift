@@ -10,4 +10,4 @@ if let temp = Double(readLine()!){
 }
 
 
-print("Podana kwota w $: " + String(format: "%.2f", value/ratio))
+print("Przeliczona kwota to: " + String(format: "%.2f" + "$", value/ratio))
