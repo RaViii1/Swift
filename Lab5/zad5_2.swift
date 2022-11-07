@@ -10,17 +10,17 @@ guard let num = Int(readLine()!) else{
 
 func checkingPrimeNumber(num: Int) -> Bool{
   
-if(num == 1 || num == 0){
-    return false
-   }
-   
-for i in 2..<num{
-if (num % i == 0){
+    if(num == 1 || num == 0){
         return false
-    }
-}
+       }
 
-return true
+    for i in 2..<num{
+    if (num % i == 0){
+            return false
+        }
+    }
+
+    return true
 }
 
 if(checkingPrimeNumber(num: num)){
