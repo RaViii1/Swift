@@ -1,23 +1,23 @@
-#Zadanie 5.1. 
+##Zadanie 5.1. 
 Utwórz aplikację konsolową – ciąg Fibonacciego
 Polecenie 1. Napisz program, który wczyta pewną liczbę do zmiennej licz oraz wyliczy i wyświetli
 kolejne elementy ciągu Fibonacciego, które nie przekraczają wartości wczytanej zmiennej. W
 przypadku, gdy kolejny wyliczony element jest większy od zmiennej licz, program powinien
 zaprzestać wyświetlania. Zastosuj instrukcję while.
-#Zadanie 5.2. 
+##Zadanie 5.2. 
 Utwórz aplikację konsolową – liczba pierwsza
 Polecenie 1. Napisz program, który wczyta pewną liczbę, a następnie sprawdzi, czy jest to liczba
 pierwsza. �
-#Zadanie 5.3. 
+##Zadanie 5.3. 
 Utwórz aplikację konsolową – średnia cyfr
 Polecenie 1. Napisz program, który wczyta liczbę i obliczy średnią geometryczną cyfr. Należy
 wymusić poprawność wczytanej liczby, aby była ona co najmniej trzycyfrowa. Należy upewnić
 się, że wczytany ciąg znaków jest liczbą.
-#Zadanie 5.4. 
+##Zadanie 5.4. 
 Utwórz aplikację konsolową – palindrom
 Polecenie 1. Napisz program, który sprawdzi, czy wczytany ciąg znaków jest palindromem
 (czytany od prawej lub lewej strony daje taki sam łańcuch). Należy zastosować pętlę!
-#Zadanie 5.5. 
+##Zadanie 5.5. 
 Utwórz aplikację konsolową – minima i maksima lokalne
 Polecenie 1. Napisz program, który wczyta ciąg liczb całkowitych {ai}, i=1, 2, …, n. Należy
 zapewnić, że �! ≠ �!"#podczas wczytywania danych. Należy znaleźć i wyświetlić liczbę minimów
