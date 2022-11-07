@@ -6,8 +6,6 @@ guard let num = Int(readLine()!) else{
     fatalError("To nie jest liczba calkowita")
 }
 
-
-
 func checkingPrimeNumber(num: Int) -> Bool{
   
     if(num == 1 || num == 0){
