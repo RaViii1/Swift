@@ -3,16 +3,17 @@ import Foundation
 var arr : [Int] = []
 var rand : Int = 0
 var wczyt : Int = 0
-
+var a : Int = 0
 repeat{
     print("Podaj wielkośc tablicy  (calkowita dodatnia): ")
     guard let Liczba = Int(readLine()!) else{
         fatalError("To nie jest liczba calkowita")
     }
-}while(Liczba < 0)
+    a = Liczba
+}while(a < 0)
 
-
-for _ in 1...Liczba{
+print("Podaj elementy tablicy: ")
+for _ in 1...a{
    if let temp = Int(readLine()!){
     rand = temp
     arr.append(rand)
@@ -40,5 +41,3 @@ if(wczyt == arr.last){
 }else{
     print("Nie jest równa ostatniemu elementowi")
 }
-
-
