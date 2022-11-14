@@ -1,3 +1,5 @@
+import Foundation
+
 var arr: [[Int]] = []
 var rand : Int = 0
 
@@ -17,15 +19,18 @@ repeat{
     
 
 for i in 0...a-1 {
+    arr.append([])
     for j in 0...b-1{
-        rand = Int.random(in: 1...100)
-        arr.append([rand])
+        arr[i].append(Int.random(in: 1...100))
     }
 }
 
+print("[", terminator: "")
 for i in 0 ..< arr.count {
+    print("[", terminator: "")
     for j in 0 ..< arr[i].count{
-        print("\(arr[i][j])", terminator:" ")
+        print("\(arr[i][j])", terminator:", ")
     }
-    print()
+    print("]")
 }
+print("]")
