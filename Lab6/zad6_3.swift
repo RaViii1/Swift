@@ -1,4 +1,4 @@
-import Swift
+ import Swift
 import Foundation
 var arr : [Int] = []
 var rand : Int = 0
@@ -19,12 +19,15 @@ for _ in 1...a{
     arr.append(rand)
 }
 }
-print("Zawartosc tablicy: ")
-for element in arr {
-  print(element)
-}
 
-print("Wczytana liczba: ")
+print("Zawartosc tablicy: ")
+print("[", terminator: "")
+for element in arr {
+  print(element, terminator: ", ")
+}
+print("]")
+
+print("Sprawdź liczbę: ")
 
 if let temp = Int(readLine()!){
     wczyt = temp
@@ -33,7 +36,7 @@ if let temp = Int(readLine()!){
 if(wczyt == arr.first){
     print("Wczytana liczba jest równa pierwszemu elementowi")
 }else{
-    print("Nie jest równa pierwszemu elementowi")
+    print("Wczytana liczba nie jest równa pierwszemu elementowi")
 }
 
 if(wczyt == arr.last){
