@@ -1,4 +1,4 @@
-var arr: [[Double]] = []
+var arr: [[Float]] = []
 var rand : Double = 0
 
 var a : Int = 0
@@ -18,24 +18,38 @@ repeat{
 }while(a < 0 || b < 0)
     
 
-for _ in 0...a-1 {
-    for _ in 0...b-1{
-        rand = Double.random(in: -100...100)
-        arr.append([rand])
+for i in 0 ..< a {
+    arr.append([])
+    for _ in 0 ..< b {
+        arr[i].append(Float.random(in: -100.0...100.0))
     }
 }
-
-for i in 0 ..< arr.count {
-    for j in 0 ..< arr[i].count{
-        print("\(arr[i][j])", terminator:" ")
+print("Tablica:")
+print("[", terminator: "")
+for i in 0 ..< a {
+    print("[", terminator: "")
+    for j in 0 ..< b{
+        print("\(arr[i][j])", terminator:", ")
     }
-    print()
+    print("]")
 }
+print("]")
 
-print("Max in array: \(arr.max())")
-print("Min in array: \(arr.min())")
+var max_v : Float = -100.0
+var max_w : Int = 0
+var max_k : Int = 0
 
-/////
+for i in 0 ..< a {
+    for j in 0 ..< b {
+        if (arr[i][j] > max_v) {
+            max_v = arr[i][j]
+            max_w = i
+            max_k = j
+        }
+    }
+}
+print("Najwiekszy element wynosi \(max_v) i znajduje sie na pozycji [\(max_w), \(max_k)]")
+///// v2
 
 
 import Foundation
