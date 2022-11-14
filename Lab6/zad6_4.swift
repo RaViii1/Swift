@@ -1,19 +1,21 @@
+
+
 import Foundation
 var arr : [Int] = []
 var arr2 : [Int] = []
 var rand : Int = 0
-var wczyt : Int = 0
-var element : Int = 0
 
+var a : Int = 0
 
-print("Podaj wielkośc tablicy  (calkowita dodatnia): ")
+repeat{
+    print("Podaj wielkośc tablicy: ")
     guard let Liczba = Int(readLine()!) else{
         fatalError("To nie jest liczba calkowita")
     }
+    a = Liczba
+}while(a < 0 )
 
-
-
-for _ in 1...Liczba{
+for _ in 1...a{
     rand = Int.random(in: 1...20)
     arr.append(rand)
     arr2.append(rand)
