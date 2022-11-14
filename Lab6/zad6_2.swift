@@ -10,8 +10,9 @@ for _ in count{
 }
 print("Zawartosc tablicy: ")
 for element in arr {
-  print(element)
+    print(element, terminator: ", ")
 }
+print("]")
 
 
 //2
@@ -22,17 +23,14 @@ if let temp = Int(readLine()!){
 }
 print("Zawartosc tablicy: ")
 for element in arr {
-  print(element)
+  print(element, terminator: ", ")
 }
+print("]")
 //3
-randIndex = Int.random(in: 1...100)
-print("Wylosowany index: \(randIndex)")
-print("Podaj liczbe calkowita: ")
-if let temp = Int(readLine()!){
-    wczyt = temp
-    arr.insert(wczyt, at: randIndex)
+var last : Int = arr.count - 1
+arr.insert(wczyt, at: Int.random(in: 0...last))
+print("[", terminator: "")
+for i in arr {
+    print(i, terminator: ", ")
 }
-print("Zawartosc tablicy: ")
-for element in arr {
-  print(element)
-}
+print("]")
