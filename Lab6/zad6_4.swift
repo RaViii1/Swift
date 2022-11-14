@@ -1,9 +1,7 @@
-
-
 import Foundation
 var arr : [Int] = []
 var arr2 : [Int] = []
-var rand : Int = 0
+
 
 var a : Int = 0
 
@@ -16,14 +14,16 @@ repeat{
 }while(a < 0 )
 
 for _ in 1...a{
-    rand = Int.random(in: 1...20)
-    arr.append(rand)
-    arr2.append(rand)
+    arr.append(Int.random(in: 1...20))
+    arr2.append(Int.random(in: 1...20))
     }
 arr2.shuffle()
-print("Zawartosc arr1:")
-arr.forEach{print($0)}
-
+print("Zawartosc arr1: [", terminator: "")
+arr.forEach{print($0, terminator: ", ")}
+print("]")
+print("Zawartosc arr1: [", terminator: "")
+arr2.forEach{print($0, terminator: ", ")}
+print("]")
 arr.forEach{
     if(arr2.contains($0)){
         print("arr2 zawiera: \($0)")
