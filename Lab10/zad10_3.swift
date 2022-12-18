@@ -42,6 +42,14 @@ print(cw(p: punkt1))
 
 
 func inSqure(p1 : punkt, bok : Double) -> Void{
-    
+    if (abs(p.x) > bok || abs(p.y) > bok) {
+        print("Punkt poza kwadratem")
+    }
+    else if (abs(p.x) < bok && abs(p.y) < bok) {
+        print("Punkt w kwadracie")
+    }
+    else {
+        print("Punkt na krawedzi kwadratu")
+    }
 }
 
