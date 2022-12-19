@@ -1,3 +1,9 @@
+//
+//  main.swift
+//  lab10
+//
+//  Created by student on 19/12/2022.
+//
 
 import Foundation
 
@@ -13,3 +19,20 @@ else if (os1.age() < os2.age()){
 else{
     print("Osoby sa w tym samym wieku")
 }
+
+
+print("________Zad 6________")
+var pr1 = Pracownik(imie: "Marcin", nazwisko: "Basak", rokUr: 2001, iloscH: 30, rokZatrudnienia: 2021, stawkazaH: 30, stanowisko: K.TeamLeader, nazwaFirmy: "Devops")
+var pr2 = Pracownik(imie: "Jakub", nazwisko: "Baran", rokUr: 2001, iloscH: 30, rokZatrudnienia: 2020, stawkazaH: 50, stanowisko: K.leadDesigner, nazwaFirmy: "Devops")
+
+pr1.wyswietl()
+
+print(pr1.yearsOfWorking())
+print(pr1.salary())
+
+pr2.wyswietl()
+
+print(pr2.yearsOfWorking())
+print(pr2.salary())
+
+
