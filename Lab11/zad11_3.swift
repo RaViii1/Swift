@@ -77,6 +77,15 @@ class Student : Osoba {
         
         }
         
+        func jakiKier(K: enum, tab: [Student]){
+            for i in 0..<tab.count{
+                if(tab.K = kierunek){
+                    print(tab[i])
+                }
+            }
+            
+        }
+        
         func stworz () {
         
             print("Podaj liczbe studentow", terminator: ": ")
@@ -130,10 +139,9 @@ class Student : Osoba {
 var student1 = Student(imie: "Marek", nazwisko: "Szewczyk", rokUr: 2001, indexNr: 546412, kierunek: K.Budownictwo, oceny: [5, 3, 3, 5, 5])
 student1.show()
 student1.srednia()
-
-stworz()
-
-
+var Studenci : [Student] = []
+Studenci = stworz()
+jakiKier(kierunek: "Budownictwo", tab: Studenci)
 
 
 
