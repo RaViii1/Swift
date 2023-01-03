@@ -19,12 +19,15 @@ class Prostopadłościan : Prostokąt{
     }
     
     override func show(){
+        print("Informacje o prostopadłocianie: ")
         print("Bok a: \(a)")
         print("Bok b: \(b)")
         print("Bok h: \(h)")
         print("Pole: ", pole())
         print("Suma krawedzi: ", sumaKraw())
-        print("Pole: ", obj())
+        print("Obj: ", obj())
         
     }
+
+
 }
