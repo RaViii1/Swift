@@ -77,71 +77,69 @@ class Student : Osoba {
         
         }
         
-        func jakiKier(K: enum, tab: [Student]){
+        func jakiKier(K: K, tab: [Student]){
             for i in 0..<tab.count{
-                if(tab.K = kierunek){
+                if(tab[i].kierunek == kierunek){
                     print(tab[i])
                 }
             }
             
         }
         
-        func stworz () {
         
-            print("Podaj liczbe studentow", terminator: ": ")
-                guard let s = Int(readLine()!) else {
-                    fatalError("To nie jest liczba calkowita!")
-            }
-                        
-            var arr : [Student] = []
-            for i in 0..<s{
-            print("Podaj Imie ", terminator: ": ")
-            guard let im = readLine() else {
-                    fatalError("To nie jest liczba calkowita!")
-                }
-                    arr[i].imie = im  
-            
-            print("Podaj nazwisko ", terminator: ": ")
-            guard let n = readLine() else {
-                    fatalError("To nie jest liczba calkowita!")
-                }
-                    arr[i].nazwisko = n  
-            
-            print("Podaj rok urodzenia ", terminator: ": ")
-            guard let ur = Int(readLine()!) else {
-                    fatalError("To nie jest liczba calkowita!")
-                }
-                    arr[i].rokUr = ur  
-            
-            
-            print("Podaj numer indexu ", terminator: ": ")
-            guard let ind = Int(readLine()!) else {
-                    fatalError("To nie jest liczba calkowita!")
-                }
-                    arr[i].indexNr = ind  
-            
-
-            for z in 1..<6{
-                print("Podaj ocene \(z)", terminator: ": ")
-            guard let o = Double(readLine()!) else {
-                    fatalError("To nie jest poprawna ocena!")
-                    }
-                    arr[i].oceny.append(o)
-                }
-            }
-        }  
                  
         
 
 }
 
+func stworz () {
+
+    print("Podaj liczbe studentow", terminator: ": ")
+        guard let s = Int(readLine()!) else {
+            fatalError("To nie jest liczba calkowita!")
+    }
+                
+    var arr : [Student] = []
+    for i in 0..<s{
+    print("Podaj Imie ", terminator: ": ")
+    guard let im = readLine() else {
+            fatalError("To nie jest liczba calkowita!")
+        }
+            arr[i].imie = im
+    
+    print("Podaj nazwisko ", terminator: ": ")
+    guard let n = readLine() else {
+            fatalError("To nie jest liczba calkowita!")
+        }
+            arr[i].nazwisko = n
+    
+    print("Podaj rok urodzenia ", terminator: ": ")
+    guard let ur = Int(readLine()!) else {
+            fatalError("To nie jest liczba calkowita!")
+        }
+            arr[i].rokUr = ur
+    
+    
+    print("Podaj numer indexu ", terminator: ": ")
+    guard let ind = Int(readLine()!) else {
+            fatalError("To nie jest liczba calkowita!")
+        }
+            arr[i].indexNr = ind
+    
+
+    for z in 1..<6{
+        print("Podaj ocene \(z)", terminator: ": ")
+    guard let o = Double(readLine()!) else {
+            fatalError("To nie jest poprawna ocena!")
+            }
+            arr[i].oceny.append(o)
+        }
+    }
+}
 
 var student1 = Student(imie: "Marek", nazwisko: "Szewczyk", rokUr: 2001, indexNr: 546412, kierunek: K.Budownictwo, oceny: [5, 3, 3, 5, 5])
 student1.show()
 student1.srednia()
 var Studenci : [Student] = []
-Studenci = stworz()
+stworz()
 jakiKier(kierunek: "Budownictwo", tab: Studenci)
-
-
-
