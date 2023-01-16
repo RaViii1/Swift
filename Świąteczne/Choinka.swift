@@ -65,48 +65,82 @@ class Choinka : Drzewo{
         }
     }
     
-    func rysujDecChoinke(layercount:Int, levelcount:Int) {
-    let length = layercount * levelcount
-    var starcount = 1
-    var spacecount = length
-    for _ in 1...layercount {
-    for _ in 1...levelcount {
-            for _ in 1...spacecount{
-                print(" ",terminator: "")
-            }
-            for i in 1...starcount {
-                if (i % 2 == 1) {
-                    print("O",terminator: "")
-                }else{
-                    print("*",terminator: "")
+    func drawDecorated (layercount : Int, levelcount : Int) {
+        var cnt = self.oCount
+        let length = layercount * levelcount
+        var starcount = 1
+        var spacecount = length
+        for _ in 1...layercount {
+            for _ in 1...levelcount {
+                for _ in 1...spacecount {
+                    print(" ",terminator: "")
                 }
-                
+                for i in 1...starcount {
+                    if (i % 2 == 0 && cnt > 0) {
+                        let r : Int = Int.random(in: 0..<oType.count)
+                        let o : String = self.oType[r]?.rawValue ?? "o"
+                        print("\(o)", terminator: "")
+                        cnt -= 1
+                    }
+                    else {
+                        print("*",terminator: "")
+                    }
+                }
+                print()
+                starcount += 2
+                spacecount -= 1
             }
-            print()
-            starcount += 2
-            spacecount -= 1
-        }
-        starcount = starcount - 2
-        spacecount = spacecount + 1
-        if levelcount <= 3 {starcount -= 2
-            spacecount += 1
+            starcount = starcount - 2
+            spacecount = spacecount + 1
+            if levelcount <= 3 {
+                starcount -= 2
+                spacecount += 1
+                
             } else {
                 starcount -= 4
                 spacecount += 2
             }
         }
         spacecount = length;
-        for _ in 1...3 { //3 to wysokość pnia
+        for _ in 1...self.rootHeight {
             for _ in 1...spacecount-1 {
-            print(" ",terminator: "")
+                print(" ",terminator: "")
             }
             for _ in 1...3 {
-            print("#",terminator: "")
+                print("#",terminator: "")
             }
             print()
         }
     }
-    
+    func ozdobyDoKupienia (layercount : Int, levelcount : Int) -> Int {
+        var cnt = 0;
+        let length = layercount * levelcount
+        var starcount = 1
+        var spacecount = length
+        for _ in 1...layercount {
+            for _ in 1...levelcount {
+                for i in 1...starcount {
+                    if (i % 2 == 0) {
+                        cnt += 1
+                    }
+                }
+                starcount += 2
+                spacecount -= 1
+            }
+            starcount = starcount - 2
+            spacecount = spacecount + 1
+            if levelcount <= 3 {
+                starcount -= 2
+                spacecount += 1
+                
+            } else {
+                starcount -= 4
+                spacecount += 2
+            }
+        }
+        return cnt - self.oCount
+    }
+}
     
 
 }
