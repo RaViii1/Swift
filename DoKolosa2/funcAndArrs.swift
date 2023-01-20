@@ -70,7 +70,7 @@ func showTab (tab : [Int]) -> Void {
 func minInTab (tab : [Int]) -> (Int, Int) {
     
     var minIndex : Int = 0
-    var minVal : Int = 0
+    var minVal : Int = tab[0]
     for i in 0 ..< tab.count - 1{
         if(tab[i]>tab[i+1]){
             minVal = tab[i+1]
@@ -115,10 +115,18 @@ func swapMM (tab : [Int]) -> Void {
 }
 swapMM(tab: tab)
 
+func tabAvg(tab : [Int]) -> Double{
+    
+    
+    var suma : Double = 0
+    var counter : Double = 0
+    for i in 0 ..< tab.count {
+        suma += Double(tab[i])
+        counter += 1
+    }
 
+    return suma / counter
+}
 
-
-
-
-
+print("Średnia: ", tabAvg(tab : tab))
 
