@@ -1,11 +1,3 @@
-/**
-
-                            Online Swift Compiler.
-                Code, Compile, Run and Debug Swift script online.
-Write your code in this editor and press "Run" button to execute it.
-
-*/
-
  import Foundation
  
  enum obywatelstwo: String, CaseIterable{
@@ -88,3 +80,19 @@ var Tenis1 = Tenisista(rodzajGry: rodzaj.singleAndDouble, aktPozycja: 71, sumaPk
 Tenis1.show()
 Tenis1.addTour()
 Tenis1.show()
+
+var Tenis2 : [Tenisista] = []
+Tenis2.append(Tenisista(rodzajGry: rodzaj.double, aktPozycja: 71, sumaPkt: 256, NajlepszaPozycja: 69, historiaMeczy: [(NazwaTurnieju: "Cos", LiczbaPunktow: 21)],Imie: "Tomek", Nazwisko: "Domek", Waga: 43.2, Wzrost: 182, Pesel: 12312345678, Kraj: obywatelstwo.polak))
+Tenis2.append(Tenisista(rodzajGry: rodzaj.double, aktPozycja: 71, sumaPkt: 256, NajlepszaPozycja: 69, historiaMeczy: [(NazwaTurnieju: "Cos", LiczbaPunktow: 21)],Imie: "Maciek", Nazwisko: "Domek", Waga: 43.2, Wzrost: 182, Pesel: 12312345678, Kraj: obywatelstwo.hiszpan))
+func printiszpan (tab: [Tenisista]) -> Void {
+
+    for i in 0..<tab.count {
+        if ((tab[i].rodzajGry == rodzaj.double) && tab[i].Kraj == obywatelstwo.hiszpan) {
+            tab[i].show()
+        }else{
+            print("Nie ma nikogo z takim obywatelstwwem grajacego w double")
+        }
+    }
+}
+
+printiszpan(tab: Tenis2)
